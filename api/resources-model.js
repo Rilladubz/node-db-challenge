@@ -1,7 +1,14 @@
 const db = require("../db-config");
 
 module.exports = {
-  find
+  find,
+  add
 };
 
-function find() {}
+function find() {
+  return db("resources");
+}
+
+function add(body) {
+  return db("resources").insert(body);
+}

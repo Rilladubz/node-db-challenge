@@ -9,6 +9,7 @@ exports.up = function(knex) {
         .boolean("completed")
         .defaultTo(false)
         .notNullable();
+      // UPDATE `table` SET `isSuccessful` = 1 WHERE `column` = 'criteria'
     })
     .createTable("tasks", tbl => {
       tbl.increments().primary("id");
